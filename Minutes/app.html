@@ -1,0 +1,35 @@
+<!-- 只要每个字符都打对，缩进、换行、格式什么都不要紧 -->
+
+<html>
+
+    <head>
+        早读摇号APP
+    </head>
+
+    <body>
+
+        <h2>
+            班级人数：<input type="input" id="sum">
+        </h2>
+
+        <button type="button" onclick="run()">开始摇号</button>
+
+        <h2>
+            今天做早读的是：
+        </h2>
+
+        <h1 id="number">
+            ?
+        </h1>
+
+    </body>
+
+   <script>
+        function run() {
+            var s = document.getElementById('number');
+            var sum = document.getElementById('sum').value;
+            s.innerHTML = Math.floor(Math.random()*Number(sum))+1 + '号';
+        }
+    </script>
+
+</html>
